@@ -49,7 +49,7 @@ export UPDATE_ZSH_DAYS=13
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump osx sublime common-aliases themes)
+plugins=(git autojump osx sublime common-aliases themes tmux)
 
 # User configuration
 
@@ -132,3 +132,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 . /Users/zhangli/torch/install/bin/torch-activate
+
+# brew cask
+HOMEBREW_CASK_OPTS=/opt/homebrew-cask/Caskroom

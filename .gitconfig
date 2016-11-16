@@ -1,0 +1,15 @@
+[user]
+	name = Zhang Li
+	email = xiaoxin88214@163.com
+[core]
+	editor = 'subl' -w
+[push]
+	default = simple
+[alias]
+	co = commit
+	re = remote
+	st = status
+	br = branch
+	ch = checkout
+    ls = log --oneline
+    caa = commit -a --amend -C HEAD

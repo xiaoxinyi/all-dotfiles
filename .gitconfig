@@ -2,7 +2,7 @@
 	name = Zhang Li
 	email = xiaoxin88214@163.com
 [core]
-	editor = 'subl' -w
+	editor = 'st'
 [push]
 	default = simple
 [alias]
@@ -13,3 +13,5 @@
 	ch = checkout
     ls = log --oneline
     caa = commit -a --amend -C HEAD
+[rerere]
+	enabled = true

@@ -2,7 +2,8 @@
 	name = Zhang Li
 	email = xiaoxin88214@163.com
 [core]
-	editor = 'st'
+	editor = 'subl' -w
+	excludesFile = /Users/zhangli/.gitignore
 [push]
 	default = simple
 [alias]

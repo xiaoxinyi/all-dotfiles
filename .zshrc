@@ -135,3 +135,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # brew cask
 HOMEBREW_CASK_OPTS=/opt/homebrew-cask/Caskroom
+
+# git alias
+alias glm="git ls-files --modified"
+alias glma="git ls-files --modified | xargs git add"

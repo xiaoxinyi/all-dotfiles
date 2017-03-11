@@ -18,3 +18,5 @@
   gam = "git ls-files --modified | xargs git add"
 [rerere]
 	enabled = true
+[credential]
+	helper = store

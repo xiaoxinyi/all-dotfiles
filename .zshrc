@@ -100,6 +100,11 @@ alias -s txt=subl
 alias -s cpp=subl
 alias -s h=subl
 
+# docker
+alias dc='docker-compose'
+alias dm='docker-machine'
+alias deit='docker exec -i -t'
+
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_60.jdk/Contents/Home
 export PATH=$JAVA_HOME/bin:$PATH
 export PATH=$PATH:/Library/TeX/texbin
@@ -114,9 +119,9 @@ export EDITOR=subl
 export VIEWER=subl
 
 # go
-export GOROOT=/usr/local/opt/go
-export PATH=$PATH:GOROOT/libexec/bin
-export GOPATH=~/code/go
+#export GOROOT=/usr/local/Cellar/go/1.5.1
+#export PATH=$PATH:$GOROOT/bin
+#export GOPATH=~/code/go
 
 # virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
@@ -155,3 +160,30 @@ if exists percol; then
     zle -N percol_select_history
     bindkey '^R' percol_select_history
 fi
+
+function ppgrep() {
+    if [[ $1 == "" ]]; then
+        PERCOL=percol
+    else
+        PERCOL="percol --query $1"
+    fi
+    ps aux | eval $PERCOL | awk '{ print $2 }'
+}
+
+function ppkill() {
+    if [[ $1 =~ "^-" ]]; then
+        QUERY=""            # options only
+    else
+        QUERY=$1            # with a query
+        [[ $# > 0 ]] && shift
+    fi
+    ppgrep $QUERY | xargs kill $*
+}
+
+# ccache
+alias clang++-ccache="ccache clang++"
+alias clang++-ccache="ccache clang"
+
+# pkg-config
+export PKG_CONFIG_PATH=/usr/local/Cellar/boost/1.63.0/lib/pkgconfig:$PKG_CONFIG_PATH
+

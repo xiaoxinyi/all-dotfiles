@@ -49,7 +49,7 @@ export UPDATE_ZSH_DAYS=13
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump osx sublime common-aliases themes tmux)
+plugins=(git autojump osx sublime common-aliases themes tmux zsh-syntax-highlighting)
 
 # User configuration
 
@@ -129,7 +129,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 # added by Anaconda3 4.0.0 installer
 # export PATH="/Users/zhangli/anaconda3/bin:$PATH"
-
+export PATH=~/anaconda2/bin:$PATH
 
 export GTAGSLIBPATH=$HOME/.gtags/
 
@@ -187,3 +187,5 @@ alias clang++-ccache="ccache clang"
 # pkg-config
 export PKG_CONFIG_PATH=/usr/local/Cellar/boost/1.63.0/lib/pkgconfig:$PKG_CONFIG_PATH
 
+# proxychains
+alias pc="proxychains4 -f ~/.proxychains.conf"

@@ -49,7 +49,7 @@ export UPDATE_ZSH_DAYS=13
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump osx sublime common-aliases themes tmux zsh-syntax-highlighting)
+plugins=(git autojump osx sublime common-aliases themes tmux zsh-syntax-highlighting zsh-autosuggestions)
 
 # User configuration
 
@@ -189,3 +189,16 @@ export PKG_CONFIG_PATH=/usr/local/Cellar/boost/1.63.0/lib/pkgconfig:$PKG_CONFIG_
 
 # proxychains
 alias pc="proxychains4 -f ~/.proxychains.conf"
+
+
+# nvm
+export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+source ~/git/nvm/nvm.sh
+
+# httpproxy
+alias proxy="http_proxy=http://0.0.0.0:8123 https_proxy=http://0.0.0.0:8123"
+alias proxy208="http_proxy=http://192.168.199.208:8123 https_proxy=http://192.168.199.208:8123"
+alias proxyhk="http_proxy=http://47.52.111.105:8123 https_proxy=http://47.52.111.105:8123"
+
+alias loadpp="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist"
+alias unloadpp="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.polipo.plist"

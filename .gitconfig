@@ -4,6 +4,7 @@
 [core]
 	editor = 'subl' -w
 	excludesFile = /Users/zhangli/.gitignore
+	quotepath = false
 [push]
 	default = simple
 [alias]
